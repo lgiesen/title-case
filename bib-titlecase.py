@@ -36,7 +36,7 @@ def apply_apa_titlecase(input_file):
 if __name__ == "__main__":
     # Check if the input file path is provided as a command-line argument
     if len(sys.argv) != 2:
-        print("Usage: python path/to/bib-titlecase.py path/to/library.bib")
+        print("Usage: python3 path/to/bib-titlecase.py path/to/library.bib\nCheck if there are any blank spaces in the filepath or use quotations around the filepath.")
         sys.exit(1)
     
     input_file = sys.argv[1]

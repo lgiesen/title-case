@@ -32,12 +32,12 @@ Title case in APA style is a capitalization style used for the titles of article
             3. Paste the capitalized text
         - Credits: [Wesley Moore](https://github.com/wezm/titlecase?tab=readme-ov-file)
 2. **Capitalize a Bibliography**
-    - Setup: Download the [bib-titlecase.py](https://github.com/lgiesen/title-case/blob/main/bib-titlecase.py).
+    - Setup: Download the [bib-titlecase.py](https://github.com/lgiesen/title-case/blob/main/bib-titlecase.py). It is required to have [Python 3](https://www.python.org/downloads/) installed.
     - Usage: Execute the Python script and pass the BibTeX file as a parameter like this:
 
-        `/Path/to/bib-titlecase.py /Path/to/library.bib`
+        `python3 "/Path/to/bib-titlecase.py" "/Path/to/library.bib"`
         
-        Then the capitalized output is saved in the new file `/Path/to/library-capitalized.bib`.
+        Then the capitalized output is saved in the new file `/Path/to/library-capitalized.bib`. 
 
 ### Bibliography
 
