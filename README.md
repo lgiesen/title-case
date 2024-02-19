@@ -22,7 +22,7 @@ Title case in APA style is a capitalization style used for the titles of article
     1. **Online**: You can use the website [Capitalize my Title](https://capitalizemytitle.com/#APAStyle) to capitalize a single title without any prep work. However, if you need to capitalize text repeatedly, it is more efficient to do it locally. 
     2. **Offline/Local**: 
         - Setup 
-            1. Download the [titlecase](https://releases.wezm.net/titlecase/1.1.0/titlecase-1.1.0-x86_64-apple-darwin.tar.gz) file. One [copy]() of it is also in this repository.
+            1. Download the [titlecase](https://releases.wezm.net/titlecase/1.1.0/titlecase-1.1.0-x86_64-apple-darwin.tar.gz) file. One [copy](https://github.com/lgiesen/title-case/blob/main/titlecase) of it is also in this repository.
             2. Add a shortcut for executing the capitalization (e.g., [iCanHazShortcut](https://github.com/deseven/iCanHazShortcut/releases/download/1.3.0/ichs.dmg) for MacOS) by running the following bash script with a keystroke of your choice. Adjust the path to the titlecase file:
 
                 `pbpaste | /Path/to/titlecase | pbcopy && pbpaste`
@@ -32,7 +32,7 @@ Title case in APA style is a capitalization style used for the titles of article
             3. Paste the capitalized text
         - Credits: [Wesley Moore](https://github.com/wezm/titlecase?tab=readme-ov-file)
 2. **Capitalize a Bibliography**
-    - Setup: Download the [bib-titlecase.py]().
+    - Setup: Download the [bib-titlecase.py](https://github.com/lgiesen/title-case/blob/main/bib-titlecase.py).
     - Usage: Execute the Python script and pass the BibTeX file as a parameter like this:
 
         `/Path/to/bib-titlecase.py /Path/to/library.bib`
