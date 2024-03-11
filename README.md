@@ -84,6 +84,8 @@ Execute the Python script and pass the BibTeX file as a parameter like this:
 
 Then the capitalized output is saved in the new file `/Path/to/library-capitalized.bib`. 
 
+##### Credits: [Garrett Dash Nelson](https://gist.github.com/garrettdashnelson/af0f8307393da37c6f94eda8c4613a4f)
+
 ## Bibliography
 
 American Psychological Association. (2020). Publication Manual of the American Psychological Association (7th ed.). https://doi.org/10.1037/0000165-000
