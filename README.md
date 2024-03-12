@@ -2,8 +2,9 @@
 [![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/learn/get-started)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
 ![GitHub version](https://img.shields.io/github/v/release/lgiesen/title-case?color=green&include_prereleases)
+<img align="right" height="72px" src="https://raw.githubusercontent.com/lgiesen/title-case/main/logo.png" />
 
-# <img height="60px" src="https://raw.githubusercontent.com/lgiesen/title-case/main/logo.png" style="margin-right:5px;"/>Title Case
+# Title Case
 
 > Need to write a title? → Use the title case to capitalize it to highlight crucial words
 
