@@ -1,6 +1,6 @@
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/release/python-390/) 
 [![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/learn/get-started)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/license/mit) 
 ![GitHub version](https://img.shields.io/github/v/release/lgiesen/title-case?color=green&include_prereleases)
 <img align="right" height="72px" src="https://raw.githubusercontent.com/lgiesen/title-case/main/logo.png" />
 
