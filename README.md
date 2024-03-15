@@ -23,74 +23,89 @@ Title case in APA style is a capitalization style used for the titles of article
 6. Exception for Names and Places: Always capitalize proper nouns, including names and places, regardless of their position in the title.
 7. Special Terms and Titles: Capitalize terms that are always capitalized, such as brand names, trademarks, and words that have special meanings or are derived from proper nouns.
 
-## Use Cases and Docs
-### **Capitalize a Single Title**
-#### **Online**
-    
-You can use the website [Capitalize my Title](https://capitalizemytitle.com/#APAStyle) to capitalize a single title without any prep work. However, if you need to capitalize text repeatedly, it is more efficient to do it locally. 
+If you only need to capitalize a single title, an online solution is the way to go. You can use [Capitalize my Title](https://capitalizemytitle.com/#APAStyle) to capitalize a single title without any preparation. However, if you need to capitalize text repeatedly, it is more efficient to do it locally. 
 
-#### **Offline/Local**
-##### Setup 
-1. If you have Apple Darwin x86_64, you can download the precompiled version 2.2.1 [here](https://github.com/lgiesen/title-case/blob/main/titlecase-v221-x86_64-apple-darwin). You can determine your system with the commands
-    `uname -a` (resulting in "Darwin [...] x86_64" here).
-    <!-- Alternatively, you can download it from the original repository for [version 1.1.0 for Apple Darwin](https://releases.wezm.net/titlecase/1.1.0/titlecase-1.1.0-x86_64-apple-darwin.tar.gz) file.  -->
-    If you have another system, you need to compile the project using the following steps. Note: The commands are for MacOS
+## Docs
+### 1. Capitalize Text
 
-    1. Install rust to compile the project coded in rust: 
+If you have Apple Darwin x86_64, you can download the precompiled version 2.2.1 [here](https://github.com/lgiesen/title-case/blob/main/titlecase-v221-x86_64-apple-darwin). You can determine your system with the commands `uname -a` (resulting in "Darwin [...] x86_64" here).
+If you have another system, you need to compile the project using the following steps. Note: The commands are for MacOS
 
-        `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-    
-    2. Set the path for rust/cargo: 
-        
-        `source "$HOME/.cargo/env"`
-        
-        You can check the versions with `rustc --version && cargo --version`
+**1. Preparation**
 
-    3. Download the project: 
-        
-        `git clone https://github.com/wezm/titlecase.git && cd titlecase`
+```
+# Install rust to compile the project coded in rust and confirm with enter
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-    4. Run the bash script to build and strip the project: 
-        
-        `chmod +x ../titlecase-build-binary-macos && ../titlecase-build-binary-macos 2.2.1 x86_64-apple-darwin` 
-        
-        In this example, the repository release version is 
-        "[2.2.1](https://github.com/wezm/titlecase/releases/tag/v2.2.1)"
-        and the system is "x86_64-apple-darwin".
+# Set the path for rust/cargo
+source "$HOME/.cargo/env"
 
-    5. Open the zip file (here: "target/titlecase-2.2.1-x86_64-apple-darwin.tar.gz")
+# You can check the versions with
+rustc --version && cargo --version
 
-    6. Move the "titlecase" bash file to the desired location
+# Download the project
+git clone https://github.com/wezm/titlecase.git
+```
 
-    7. Remove the titlecase project `cd .. && rm -r titlecase` and confirm the overrides with `y`
+**2. Development**
 
-    8. Uninstall rust with `rustup self uninstall` and confirm with `y`
+In this example, the repository release version is 
+"[2.2.1](https://github.com/wezm/titlecase/releases/tag/v2.2.1)"
+and the system is "x86_64-apple-darwin".
+Open the zip file (here: "target/titlecase-2.2.1-x86_64-apple-darwin.tar.gz") and move the "titlecase" bash file to the desired location
 
 
+```
+# Give permission to execute the script
+chmod +x ../titlecase-build-binary-macos 
 
-2. Add a shortcut for executing the capitalization (e.g., [iCanHazShortcut](https://github.com/deseven/iCanHazShortcut/releases/download/1.3.0/ichs.dmg) for MacOS) by running the following bash script with a keystroke of your choice. Adjust the path to the titlecase file:
+# Run the bash script to build and strip the project
+../titlecase-build-binary-macos 2.2.1 x86_64-apple-darwin
 
-    `pbpaste | /Path/to/titlecase | pbcopy && pbpaste`
-##### Usage
+# Find the .tar.gz file
+first_tar_gz=$(find target -maxdepth 1 -name '*.tar.gz' | head -n 1)
+
+# Unzip it into the current directory
+tar -xzvf "$first_tar_gz" -C .
+
+# Cleanup: Uninstall rust and confirm with "y"
+rustup self uninstall
+```
+
+Make sure to open the file once, so that your system trusts the file. For MacOs, just use "Open with" > "Terminal"
+
+<!-- X. Remove the titlecase project `rm -r titlecase` and confirm the overrides with `y` -->
+
+**3. Application**
+
+Add a shortcut for executing the capitalization with [Shortcuts](https://www.icloud.com/shortcuts/48acb8b78c1f4e46b55d64e29cc6b378). Of course, you need to adjust the path to your titlecase file in the shell script. 
+Alternatively, you can use [iCanHazShortcut](https://github.com/deseven/iCanHazShortcut/releases/download/1.3.0/ichs.dmg) for MacOS) by running the following bash script with a keystroke of your choice. Adjust the path to the titlecase file:
+```
+pbpaste | /Path/to/titlecase | pbcopy && pbpaste
+```
+
+### Usage
 1. Copy the text
 2. Apply your keystroke shortcut
 3. Paste the capitalized text
 
-##### Credits: [Wesley Moore and Rin Arakaki](https://github.com/wezm/titlecase)
+Credits: [Wesley Moore and Rin Arakaki](https://github.com/wezm/titlecase)
 
-### **Capitalize a Bibliography**
+### 2. Capitalize a Bibliography
 #### Setup
 
 Download the [bib-titlecase.py](https://github.com/lgiesen/title-case/blob/main/bib-titlecase.py). You also need to have [Python 3](https://www.python.org/downloads/) installed.
 
 #### Usage
-Execute the Python script and pass the BibTeX file as a parameter like this:
+Execute the Python script and pass the BibTeX filepath as a parameter like this:
 
-`python3 "/Path/to/bib-titlecase.py" "/Path/to/library.bib"`
+```
+python3 "/Path/to/bib-titlecase.py" "/Path/to/library.bib"
+```
 
 Then the capitalized output is saved in the new file `/Path/to/library-capitalized.bib`. 
 
-##### Credits: [Garrett Dash Nelson](https://gist.github.com/garrettdashnelson/af0f8307393da37c6f94eda8c4613a4f)
+Credits: [Garrett Dash Nelson](https://gist.github.com/garrettdashnelson/af0f8307393da37c6f94eda8c4613a4f)
 
 ## Bibliography
 
