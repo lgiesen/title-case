@@ -29,7 +29,10 @@ If you only need to capitalize a single title, an online solution is the way to 
 ### 1. Capitalize Text
 
 If you have Apple Darwin x86_64, you can download the precompiled version 2.2.1 [here](https://github.com/lgiesen/title-case/blob/main/titlecase-v221-x86_64-apple-darwin). You can determine your system with the commands `uname -a` (resulting in "Darwin [...] x86_64" here).
-If you have another system, you need to compile the project using the following steps. Note: The commands are for MacOS
+If you have another system, you need to compile the project using the following steps. 
+
+Note: 
+(1) The commands are for MacOS. (2) I have adjusted the [src/lib.rs](https://github.com/lgiesen/title-case/blob/main/lib.rs) file to account for german words that should not be capitalized. 
 
 **1. Preparation**
 
@@ -70,11 +73,11 @@ tar -xzvf "$first_tar_gz" -C .
 
 # Cleanup: Uninstall rust and confirm with "y"
 rustup self uninstall
+# Cleanup: Remove the titlecase project and confirm the overrides with "y"
+rm -r titlecase
 ```
 
 Make sure to open the file once, so that your system trusts the file. For MacOs, just use "Open with" > "Terminal"
-
-<!-- X. Remove the titlecase project `rm -r titlecase` and confirm the overrides with `y` -->
 
 **3. Application**
 
