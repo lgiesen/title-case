@@ -84,6 +84,9 @@ Make sure to open the file once, so that your system trusts the file. For MacOs,
 Add a shortcut for executing the capitalization with [Shortcuts](https://www.icloud.com/shortcuts/48acb8b78c1f4e46b55d64e29cc6b378). Of course, you need to adjust the path to your titlecase file in the shell script. 
 Alternatively, you can use [iCanHazShortcut](https://github.com/deseven/iCanHazShortcut/releases/download/1.3.0/ichs.dmg) for MacOS) by running the following bash script with a keystroke of your choice. Adjust the path to the titlecase file:
 ```
+# Use the following line only if you need to consider special characters, such as ä, ö, ü, and ß
+export LANG=en_US.UTF-8
+# Application of title case
 pbpaste | /Path/to/titlecase | pbcopy && pbpaste
 ```
 
